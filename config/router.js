@@ -23,17 +23,17 @@ const defaultRouterParams = ( fn ) => {
 }
 
 module.exports = [
-  // defaultRouterParams({
-  //   name: 'routerDemo',
-  //   discribe: 'react 实例',
-  //   path: '/routerDemo'
-  // }),
+  defaultRouterParams({
+    name: 'routerDemo',
+    discribe: 'react 实例',
+    path: '/routerDemo'
+  }),
 
-  // defaultRouterParams({
-  //   name: 'todolist',
-  //   discribe: '列表demo',
-  //   path: '/todolist'
-  // }),
+  defaultRouterParams({
+    name: 'todolist',
+    discribe: '列表demo',
+    path: '/todolist'
+  }),
 
   defaultRouterParams({
     name: 'vueDemo',

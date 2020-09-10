@@ -1,4 +1,4 @@
-{
+module.exports = {
   "ret": true,
   "data": {
     "sightName": "大连圣亚海洋世界(AAAA景区)",

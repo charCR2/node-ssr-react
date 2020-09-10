@@ -1,15 +1,13 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import { Route,BrowserRouter,Link,Switch } from "react-router-dom"
-
 import routerDemo from "./routes"
-
 class App extends React.Component {
     render(){
         return (
             <BrowserRouter>
                 <ul>
-                    <li><Link to="/routerDemo/home">ome</Link></li>
+                    <li><Link to="/routerDemo/home">home</Link></li>
                     <li><Link to="/routerDemo/blog">blog</Link></li>
                     <li><Link to="/routerDemo/resume">resume</Link></li>
                 </ul>

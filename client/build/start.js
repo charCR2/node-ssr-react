@@ -7,36 +7,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 const requireContext = require('require-context')
 const path = require('path')
- 
-// const router = requireContext(path.join(__dirname,'./routes'), false, /.js$/);
-// router.keys().forEach( (key) => {
-//   exports[key] = router[key]
-// })
+
 const config = 
 isProd 
 ? require('./webpack.prod.config')
 : require('./webpack.dev.config')
 
 console.log('当前环境' +  process.env.NODE_ENV)
-// chunk排序方法
-// const chunkSortFun = sortChunksKeys => {
-// 	if (!sortChunksKeys || !sortChunksKeys.length) {
-// 		return "dependency";
-// 	}
-// 	return (chunk1, chunk2) => {
-// 		let orders = sortChunksKeys;
-// 		let order1 = orders.indexOf(chunk1.names[0]);
-// 		let order2 = orders.indexOf(chunk2.names[0]);
-
-// 		if (order1 > order2) {
-// 			return 1;
-// 		} else if (order1 < order2) {
-// 			return -1;
-// 		} else {
-// 			return 0;
-// 		}
-// 	};
-// };
 
 // 创建html-webpack-plugin实例方法
 const newHtmlWebpackPlugin = config => {
@@ -79,8 +56,6 @@ const filly = merge(
     plugins: [ ...htmlMap ],
   }
 )
-console.log(filly.module.rules)
-
 function start () {
   const compiler = webpack(filly);
   console.log('开始编译dev·····')
@@ -95,30 +70,30 @@ function start () {
     compiler.watch({}, (err, stats) => {
       if (err || stats.hasErrors()) {
         console.error(err);
-        console.log(stats.toString({
-            colors: true,    // 在控制台展示颜色
-            modules: false,
-            cachedAssets: false,
-            cached: false,
-            children: false,
-            chunkOrigins: false,
-            chunkModules: false,
-        }))
+        // console.log(stats.toString({
+        //     colors: true,    // 在控制台展示颜色
+        //     modules: false,
+        //     cachedAssets: false,
+        //     cached: false,
+        //     children: false,
+        //     chunkOrigins: false,
+        //     chunkModules: false,
+        // }))
       }else{
-        const statJson = stats.toJson()
-        // console.log(stats.toJson({
-        //   assets: true,  // 添加资源信息
-        //   chunks: false,  // 使构建过程更静默无输出
-        //   colors: true,    // 在控制台展示颜色
-        //   modules: false,
-        //   cachedAssets: false,
-        //   cached: false,
-        //   children: false,
-        //   chunkOrigins: false,
-        //   chunkModules: false,
-        // }));
-        // console.log('编译结束·····')
-        console.log(`编译结束,用时 --- ${statJson.time}ms`)
+        // const statJson = stats.toJson()
+        console.log(stats.toString({
+          assets: true,  // 添加资源信息
+          chunks: false,  // 使构建过程更静默无输出
+          colors: true,    // 在控制台展示颜色
+          modules: false,
+          cachedAssets: false,
+          cached: false,
+          children: false,
+          chunkOrigins: false,
+          chunkModules: false,
+        }));
+        console.log('编译结束·····')
+        // console.log(`编译结束,用时 --- ${statJson.time}ms`)
         // console.log(stats.toString({
         //     assets: true,  // 添加资源信息
         // }))

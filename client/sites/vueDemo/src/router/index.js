@@ -6,12 +6,14 @@ import City from '../pages/city/City'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  base: '/vueDemo/',
   routes: [{
     path: '/',
     name: 'Home',
     component: Home
   },
-  {path: '/city',
+  { path: '/city',
     name: 'City',
     component: City
   }]

@@ -32,7 +32,7 @@ export default {
   methods: {
     getCityInfo () {
       // eslint-disable-next-line no-undef
-      axios.get('api/city.json')
+      axios.get('api/city')
         .then(this.handleGetCityInfoSucc)
     },
     handleGetCityInfoSucc (res) {
