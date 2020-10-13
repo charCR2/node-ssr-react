@@ -1,6 +1,6 @@
 var express = require("express");
 var fs = require('fs')
-
+var chalk = require('chalk')
 var path = require('path')
 var app = express();//执行express返回封装对象
 var cors = require('./middleware/cros')

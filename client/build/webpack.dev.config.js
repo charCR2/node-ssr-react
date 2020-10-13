@@ -1,14 +1,10 @@
 const webpackMerge = require("webpack-merge");
-const path = require('path')
 const baseWebpackConfig = require("./webpack.config")
-const Paths = require("../../config/paths");
-const HtmlWebpackPlugin = require("html-webpack-plugin")
 const utils = require('./utils')
 const LiveReloadPlugin = require("webpack-livereload-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
-
 
 module.exports = webpackMerge.merge(baseWebpackConfig,{
     // 指定构建环境  

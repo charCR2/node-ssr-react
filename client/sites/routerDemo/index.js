@@ -7,7 +7,7 @@ class App extends React.Component {
         return (
             <BrowserRouter>
                 <ul>
-                    <li><Link to="/routerDemo/home">home</Link></li>
+                    <li><Link to="/routerDemo/home">hom1e</Link></li>
                     <li><Link to="/routerDemo/blog">blog</Link></li>
                     <li><Link to="/routerDemo/resume">resume</Link></li>
                 </ul>

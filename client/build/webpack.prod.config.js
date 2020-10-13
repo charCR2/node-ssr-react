@@ -1,13 +1,12 @@
 const webpackMerge = require("webpack-merge");
 const baseWebpackConfig = require("./webpack.config")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const Paths = require("../../config/paths");
+
 const {CleanWebpackPlugin} = require('clean-webpack-plugin') 
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer') 
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin =require('uglifyjs-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const utils = require('./utils')
+
 module.exports = webpackMerge.merge(baseWebpackConfig,{
     // 指定构建环境  
     mode:"production",

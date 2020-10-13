@@ -5,10 +5,6 @@
     "node_modules/**/node_modules",
     "client/"
   ],
-  "verbose": true,
-  "execMap": {
-    "js": "node --harmony"
-  },
   "watch": [
     "servers/"
   ],
