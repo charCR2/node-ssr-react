@@ -70,15 +70,15 @@ function start () {
     compiler.watch({}, (err, stats) => {
       if (err || stats.hasErrors()) {
         console.error(err);
-        // console.log(stats.toString({
-        //     colors: true,    // 在控制台展示颜色
-        //     modules: false,
-        //     cachedAssets: false,
-        //     cached: false,
-        //     children: false,
-        //     chunkOrigins: false,
-        //     chunkModules: false,
-        // }))
+        console.log(stats.toString({
+            colors: true,    // 在控制台展示颜色
+            modules: false,
+            cachedAssets: false,
+            cached: false,
+            children: false,
+            chunkOrigins: false,
+            chunkModules: false,
+        }))
       }else{
         // const statJson = stats.toJson()
         console.log(stats.toString({

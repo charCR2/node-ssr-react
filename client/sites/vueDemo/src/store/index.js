@@ -1,16 +1,24 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
+let initState = global.__INIT_STATE__
 
-export default new Vuex.Store({
-  state: {
-    city: localStorage.city || '上海'
-  },
-  mutations: {
+if(!initState) initState = {
+  city: '上海',
+}
+const store = {
+
+  state: initState,
+  mutations :{
     changeCity (state, city) {
       state.city = city
-      localStorage.city = city
-    }
+      // localStorage.city = city
+    },
+  },
+  actions: {
+
   }
-})
+};
+Vue.use(Vuex)
+if(!initState) store = new Vuex.Store(store)
+export default store

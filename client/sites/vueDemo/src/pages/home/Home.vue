@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('vueDemo/api/index')
+      axios.get('api/index')
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
