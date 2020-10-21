@@ -1,2 +1,4 @@
 # node-ssr-react
-a node
+
+#启动
+> npm run start
