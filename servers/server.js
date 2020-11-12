@@ -17,19 +17,19 @@ import { routerDemoHeadler } from'./router/index'
 // // 静态资源处理
 app.use(express.static(path.resolve(__dirname, "../client/dist")))
 // //处理前端get请求,req.query包含get请求参数,res.send响应请求
-// app.get("/todolist",function(req,res){
-//   fs.readFile(path.resolve(__dirname, '../client/dist/todolist.html'), function(err, content){
-//     res.set('Content-Type', 'text/html');
-//     res.status('200').send(content)
-//   })
-// })
+app.get("/todolist",function(req,res){
+  fs.readFile(path.resolve(__dirname, '../client/dist/todolist.html'), function(err, content){
+    res.set('Content-Type', 'text/html');
+    res.status('200').send(content)
+  })
+})
 // //处理前端get请求,req.query包含get请求参数,res.send响应请求
-// app.get("/routerDemo/*",function(req,res){
-//   fs.readFile(path.resolve(__dirname, '../client/dist/routerDemo.html'), function(err, content){
-//     res.set('Content-Type', 'text/html');
-//     res.status('200').send(content)
-//   })
-// })
+app.get("/routerDemo/*",function(req,res){
+  fs.readFile(path.resolve(__dirname, '../client/dist/routerDemo.html'), function(err, content){
+    res.set('Content-Type', 'text/html');
+    res.status('200').send(content)
+  })
+})
 app.get("/vueDemo/api/:filename",function(req, res){
   const file = req.params.filename
   res.status(200).json(staticFile[file]);

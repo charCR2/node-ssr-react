@@ -10,6 +10,7 @@ class App extends React.Component {
                     <li><Link to="/routerDemo/home">hom1e</Link></li>
                     <li><Link to="/routerDemo/blog">blog</Link></li>
                     <li><Link to="/routerDemo/resume">resume</Link></li>
+                    <li><Link to="/routerDemo/concurrent">concurrent</Link></li>
                 </ul>
                 <div>
                     {/* Switch只显示一个组件。加exact表示精确匹配/。如果不加exact，/xxx也会匹配/。  */}
@@ -35,3 +36,4 @@ class App extends React.Component {
 }
 
 ReactDom.render(<App/>,document.getElementById("app"))
+ReactDom.unstable_batchedUpdates = true

@@ -29,6 +29,17 @@ module.exports =  ({ htmlPath, routers, store, defaultHandlers }) => async (req,
                 return;
             }
         }
+        
+        // 开启服务端渲染
+        // if (ssr) {
+        //     // 需要服务端渲染才去匹配routers
+        //     const renderProps = await routerMatch(req, res, routers);
+        //     const css = new Set();
+        //     const context = { insertCss: (...styles) => styles.forEach(style => {
+        //         if(style._getCss){
+        //             css.add(style._getCss());
+        //         }
+        //     }) };
         // Vue.use(Vuex)
         // let app = new Vue({
         //     template: <Provider>
@@ -42,25 +53,7 @@ module.exports =  ({ htmlPath, routers, store, defaultHandlers }) => async (req,
         //     router,
         // })
 
-        // 需要服务端渲染
-        // if (!isNoSSr) {
-        //     // 需要服务端渲染才去匹配routers
-        //     const renderProps = await routerMatch(req, res, routers);
-        //     const css = new Set();
-        //     const context = { insertCss: (...styles) => styles.forEach(style => {
-        //         if(style._getCss){
-        //             css.add(style._getCss());
-        //         }
-        //     }) };
-        //     let htmlDom = (
-        //         <Provider store={store}>
-        //             <RouterContext
-        //                 {...renderProps}
-        //                 createElement={(Component, props) => <Component {...props} context={context} />}
-        //             />
-        //         </Provider>
-        //     );
-        //     let content = await renderToString(htmlDom);
+        //     let content = await renderToString(app);
         //     options.renderData.css = [...css].join('');
         //     options.renderData.html = content;
         // }

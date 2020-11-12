@@ -6,7 +6,8 @@
     "client/"
   ],
   "watch": [
-    "servers/"
+    "servers/",
+    "test/"
   ],
   "env": {
     "NODE_ENV": "development"

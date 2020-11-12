@@ -92,7 +92,7 @@ function start () {
           chunkOrigins: false,
           chunkModules: false,
         }));
-        console.log('编译结束·····')
+        console.log('编译结束·····,本地访问：http://127.0.0.1:8082')
         // console.log(`编译结束,用时 --- ${statJson.time}ms`)
         // console.log(stats.toString({
         //     assets: true,  // 添加资源信息

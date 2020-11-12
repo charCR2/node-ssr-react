@@ -23,7 +23,7 @@ export default class BlogIndex extends React.Component {
         return (
             <div className="blog-container">
                 <p onClick={this.showModal}>BlogIndex</p>
-                <Modal
+                <Modal 
                     title="Modal"
                     visible={this.state.visible}
                     onOk={this.hideModal}

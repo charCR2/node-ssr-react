@@ -11,9 +11,11 @@ import './src/assets/styles/border.css'
 import './src/assets/styles/iconfont.css'
 import fastClick from 'fastClick'
 
+
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
+
 
 /* eslint-disable no-new */
 const app = new Vue({

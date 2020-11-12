@@ -19,5 +19,11 @@ export default  [
       path: "/routerDemo/resume",
       component: asyncRouter( () => import("./pages/resume")), 
       exact: true
+    },
+    {
+      name: 'concurrent',
+      path: "/routerDemo/concurrent",
+      component: asyncRouter( () => import("./pages/concurrent")), 
+      exact: true
     }
   ]
